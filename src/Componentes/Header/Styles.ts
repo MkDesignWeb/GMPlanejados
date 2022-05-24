@@ -43,10 +43,10 @@ export const Menu = styled.nav<Props>`
     z-index: 3;
     overflow: hidden;
     position: sticky;
-    transition: ease 0.2s;
+    transition: ease 0.4s;
     align-items: center;
     top: 0;
-    right: ${props => props.open === false ? '0' : '-100%' };
+    right: ${props => props.open === false ? '0' : '-150%' };
     background-color: ${props => props.theme.colors.primary};
     height: 2rem;
     display: flex;
