@@ -2,7 +2,7 @@
   "name": "gmplanejados",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://mkdesignweb.github.io/GMPlanejados",
+  "homepage": "./",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
