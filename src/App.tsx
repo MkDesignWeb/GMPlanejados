@@ -5,6 +5,7 @@ import Header from "./Componentes/Header"
 import Principal from "./Componentes/Principal"
 import RedesSociais from "./Componentes/RedesSociais"
 import Projetos from './Componentes/Projetos'
+import Rodape from "./Componentes/RodaPe"
 import cor from "./Styles/Colors"
 import Orcamento from "./Componentes/Botão"
 
@@ -30,7 +31,8 @@ function App() {
       <Orcamento scroll={scroll}/>
       <Principal />
       <RedesSociais />
-      <Projetos /> 
+      <Projetos />
+      <Rodape/>
       <GlobalStyle />
     </ThemeProvider>
     
