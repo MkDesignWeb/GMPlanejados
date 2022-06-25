@@ -5,10 +5,11 @@ import { useState, useEffect } from 'react'
 import Modal from '../Modal/index'
 
 
+
 function Projetos() {
 
     const [modalOpen, setModalOpen] = useState(false)
-    const setmodal = (f) => {
+    const setmodal = (f: boolean) => {
         if (f = true){
             setModalOpen(false)
         }
@@ -17,10 +18,10 @@ function Projetos() {
    
 
     const firebaseConfig = initializeApp({
-        apiKey: "AIzaSyBrohlbDLZgFAYPRu9Vx_30U09MumKlsn8",
-        authDomain: "gmplanejados-projetos.firebaseapp.com",
-        databaseURL: "https://gmplanejados-projetos-default-rtdb.firebaseio.com",  
-        projectId: "gmplanejados-projetos", 
+        apiKey: import.meta.env.VITE_API_KEY,
+        authDomain: import.meta.env.VITE_AUTHDOMAIN,
+        databaseURL: import.meta.env.VITE_DATA_BASE_URL,  
+        projectId: import.meta.env.VITE_PROJECT_ID, 
       }) 
     
       const [moveis, setMoveis] = useState([])

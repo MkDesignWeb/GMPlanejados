@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "build"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
