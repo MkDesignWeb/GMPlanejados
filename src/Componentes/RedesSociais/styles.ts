@@ -23,12 +23,12 @@ export const Container = styled.section`
 `
 
 export const Celular = styled.img`
-    height: 38vw;
+    height: 35vw;
     max-height: 33rem;
 
 
     @media (max-width: 750px) {
-        height: 60vw;
+        height: 70vw;
         max-height: 23rem;
     }
 
