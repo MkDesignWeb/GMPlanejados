@@ -25,6 +25,7 @@ export const Titulo = styled.h1`
     transition: all ease 0.2s;
 
     @media (max-width: 750px) {
+        font-size: 1.6rem;
         box-shadow: 0.4rem 0.4rem 0.7rem #00000067;
     }
     

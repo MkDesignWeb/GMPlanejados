@@ -16,10 +16,10 @@ export const Container = styled.a<Props>`
     align-items: center;
     justify-content: center;
 
-    font-size: 1.2rem;
+    font-size: 1rem;
     height: 2.7rem;
     margin: 0.3rem 0;
-    padding: 0 0.6rem ;
+    padding: 0 0.6rem;
 
     font-weight: 900;
     font-family: 'Roboto';
@@ -37,6 +37,7 @@ export const Container = styled.a<Props>`
 
     @media (min-width: 750px){
         top: initial;
+        padding: 0 1rem;
         bottom: 0.3rem;
         left: 0.7rem;
 
