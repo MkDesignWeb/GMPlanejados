@@ -16,7 +16,7 @@ export const Container = styled.a<Props>`
     align-items: center;
     justify-content: center;
 
-    font-size: 1rem;
+    font-size: 0.9rem;
     height: 2.7rem;
     margin: 0.3rem 0;
     padding: 0 0.6rem;
