@@ -3,19 +3,22 @@ import Modal from '../Modal/index'
 import { gql, useQuery } from "@apollo/client";
 
 import { Container, Separador, TituloM, MarcCorM, Bfoto, Galeria, Imagem, Black } from './styles'
+import { Oval } from 'react-loader-spinner';
+import { useParams } from 'react-router-dom';
+
 
 
 const GET_MOVEIS = gql`
     query {
-  moveisDbs (stage: PUBLISHED){
-    id
-    img {
-      url
+     moveisDbs (stage: PUBLISHED){
+        id
+        img {
+        url
+        }
+        name
+        description
+        slug
     }
-    name
-    description
-    slug
-  }
 }
 `
 
@@ -23,46 +26,52 @@ interface moveis {
     moveisDbs: {
         id: string,
         img: {
-          url: string
+            url: string
         },
         name: string,
         description: string,
         slug: string
-}[]}
+    }[]
+}
 
 function Projetos() {
 
-    const [modalOpen, setModalOpen] = useState(false)
-    const setmodal = (f: boolean) => {
-        if (f = true){
-            setModalOpen(false)
-        }
-        
-    }
-   
-     const {data} =  useQuery<moveis>(GET_MOVEIS)
+    const { slug } = useParams<{slug: string}>()
+    const { data } = useQuery<moveis>(GET_MOVEIS)
 
 
-    if(!data){
-        return(
-            <div>Carregando</div>
+    if (!data) {
+        return (
+            <Container id='projetos'>
+                <Separador />
+                <TituloM>Veja nossos <MarcCorM>Projetos</MarcCorM></TituloM>
+                <Galeria>
+                    <Oval
+                        ariaLabel="loading-indicator"
+                        height={100}
+                        width={100}
+                        strokeWidth={4}
+                        color="#F28705"
+                        secondaryColor="none"
+                    />
+                </Galeria>
+            </Container>
         )
     }
-    return(
+    return (
         <Container id='projetos'>
-            <Modal setmodal={setmodal} modalOpen={modalOpen}/>
+            { slug != undefined ? <Modal /> : ''}
             <Separador />
             <TituloM>Veja nossos <MarcCorM>Projetos</MarcCorM></TituloM>
             <Galeria>
-            {data?.moveisDbs.map(moveisDbs => {
-                return(
-                    <Bfoto onClick={() => {setModalOpen(true)}} key={moveisDbs.slug} >
-                        <Imagem Mimg={moveisDbs.img.url} />
-                        <Black><h1>{moveisDbs.name}</h1></Black>
-                        
-                    </Bfoto>
-                )
-            })}
+                {data?.moveisDbs.map(moveisDbs => {
+                    return (
+                        <Bfoto to={`/moveis/${moveisDbs.slug}`} key={moveisDbs.slug} >
+                            <Imagem Mimg={moveisDbs.img.url} />
+                            <Black><h1>{moveisDbs.name}</h1></Black>
+                        </Bfoto>
+                    )
+                })}
             </Galeria>
         </Container>
     )

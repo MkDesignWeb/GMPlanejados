@@ -4,10 +4,14 @@ import { BsFacebook } from 'react-icons/bs';
 import { AiFillInstagram } from 'react-icons/ai'
 import { RiWhatsappFill } from 'react-icons/ri'
 
+
+
 function RedesSociais() {
     return(
         <Container id="social">
+
             <Celular src={celular} />
+
             <CaixaDeTexto>
                 <Bloco>
                     <Titulo> Siga nas <MarcCor>Redes Sociais</MarcCor></Titulo>

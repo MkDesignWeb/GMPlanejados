@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { MarcCor, Titulo } from '../RedesSociais/styles'
+import { Link as LinkRouter } from 'react-router-dom'
 
 interface Props{
     Mimg: string
@@ -16,9 +17,7 @@ export const Container = styled.section`
 
 `
 
-export const MarcCorM = styled(MarcCor)`
-
-`
+export const MarcCorM = styled(MarcCor)``
 
 
 export const TituloM =styled(Titulo)`
@@ -57,7 +56,8 @@ export const Black = styled.div`
     }
 `
 
-export const Bfoto = styled.div`
+export const Bfoto = styled(LinkRouter)`
+    cursor: initial;
     position: relative;
     display: flex;
     width: 16rem;
@@ -107,3 +107,4 @@ export const Imagem = styled.div<Props>`
     background-size: cover;
 
 `
+

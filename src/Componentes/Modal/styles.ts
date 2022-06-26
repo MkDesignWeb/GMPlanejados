@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
-interface Props {
-    modalOpen: Boolean
-}
 
-export const Container = styled.div<Props>`
+export const Container = styled.div`
+    display: flex;
     z-index: 7;
     position: fixed;
     top: 0;
 
-    display: ${props => props.modalOpen ? "flex" : "none"};
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -20,31 +17,47 @@ export const Container = styled.div<Props>`
 `
 
 export const Cmodal = styled.div`
+    background-color: white;
+    margin: 0.7rem;
+
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
-    max-width: 60rem;
-    width: 85vw;
-    height: 38rem;
-    background-color: red;
+    
+    
+
 
     @media (max-width: 750px) {
         flex-direction: column;
     }
 `
 
-export const CImagem = styled.div`
-    width: 60%;
-    height: 100%;
-
-    background-color: white;
-
-    @media(max-width: 750px){
+export const CImagem = styled.img`
+        background-color: #1111;
         width: 100%;
-        height: 60%;
+        max-height: 90vh;
+        object-fit: scale-down;
+    
+    @media(max-width: 750px){
+        max-height: 85vh;
     }
+
 `
 
 export const CTexto = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
+    padding: 1rem;
+
+    width: 20rem;
+    height: 90vh;
+
+    @media(max-width: 750px){
+        width: 100%;
+        height: 5rem;
+    }
 `
