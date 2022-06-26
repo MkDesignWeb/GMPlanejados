@@ -4,6 +4,7 @@ export function Router(){
     return(
         <Routes>
             <Route path="/" element={<Home />}/>
+            <Route path="/moveis" element={<Home />}/>
             <Route path="/moveis/:slug" element={<Home />}/>
         </Routes>
     )
