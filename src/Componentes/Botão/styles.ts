@@ -9,7 +9,7 @@ export const Container = styled.a<Props>`
 
     z-index: 2;
     position: fixed;
-    left: 1rem;
+    left: 5px;
     top: ${props => props.scroll > 0 ? '0rem' : '3.4rem'};
 
     display: flex;
@@ -21,7 +21,7 @@ export const Container = styled.a<Props>`
     margin: 0.3rem 0;
     padding: 0 0.6rem ;
 
-    font-weight: 500;
+    font-weight: 900;
     font-family: 'Roboto';
     text-transform: uppercase;
     text-decoration: none;
