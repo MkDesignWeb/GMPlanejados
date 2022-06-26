@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
     display: flex;
@@ -17,8 +17,10 @@ export const Container = styled.div`
 `
 
 export const Cmodal = styled.div`
+    position: relative;
     background-color: white;
     margin: 0.7rem;
+    border-radius: 0.3rem;
 
     display: flex;
     flex-direction: row;
@@ -41,7 +43,7 @@ export const CImagem = styled.img`
         object-fit: scale-down;
     
     @media(max-width: 750px){
-        max-height: 85vh;
+        max-height: 75vh;
     }
 
 `
@@ -58,6 +60,49 @@ export const CTexto = styled.div`
 
     @media(max-width: 750px){
         width: 100%;
-        height: 5rem;
+        height: auto;
+        padding: 1rem 0.3rem;
+    }
+`
+
+export const Loading = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+
+    width: 90vw;
+    max-width: 50rem;
+    height: 30rem;
+
+    @media(max-width: 750px) {
+        height: 20rem;
+    }
+`
+
+export const Close = styled(Link)`
+    position: absolute;
+    top: 0.2rem;
+    right: 0.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: ${props => props.theme.colors.secudary};
+    background-color: white;
+    border-radius: 40%;
+    width: 2.2rem;
+    height: 2.2em;
+
+    @media(max-width: 750px){
+        justify-content: end;
+        padding-right: 0.5rem;
+        width: 100%;
+        border-radius: initial;
+        border-top-left-radius: 0.3rem;
+        border-top-right-radius: 0.3rem;
+        top: -2.2rem;
+        right: 0;
     }
 `
