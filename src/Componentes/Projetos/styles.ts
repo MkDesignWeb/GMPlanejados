@@ -53,7 +53,7 @@ export const Black = styled.div`
     transition: all ease 0.3s;
 
     @media (max-width:750px){
-        padding: 0 3rem 0 0.3rem;
+        padding: 0 2rem 0 0.3rem;
     }
 `
 
@@ -75,8 +75,12 @@ export const Bfoto = styled.div`
     }
 
     @media (max-width:750px) {
-        width: 15rem;
-    height: 15rem;
+        width: 10rem;
+        height: 10rem;
+
+        h1{
+            font-size: 1.2rem;   
+        }
     }
 `
 

@@ -1,5 +1,5 @@
 import { Container, Separador, TituloM, MarcCorM, Bfoto, Galeria, Imagem, Black } from './styles'
-import {initializeApp} from 'firebase/app'
+import { initializeApp } from 'firebase/app'
 import { getFirestore, collection, getDocs } from 'firebase/firestore'
 import { useState, useEffect } from 'react'
 import Modal from '../Modal/index'

@@ -19,9 +19,9 @@ export const Container = styled.a<Props>`
     font-size: 1.2rem;
     height: 2.7rem;
     margin: 0.3rem 0;
-    padding: 0 0.5rem ;
+    padding: 0 0.6rem ;
 
-    font-weight: 400;
+    font-weight: 500;
     font-family: 'Roboto';
     text-transform: uppercase;
     text-decoration: none;

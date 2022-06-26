@@ -1,5 +1,5 @@
 import {Container, Painel, Image, Explore, BtnExplore, Marc  } from './styles'
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import { IoIosArrowBack } from 'react-icons/io'
 
 
 function Principal() {
@@ -15,7 +15,7 @@ function Principal() {
                 smooth={true}
                 offset={0}
                 duration={500}
-            > <p>Explore</p><ArrowBackIosIcon /> </BtnExplore> </Explore>
+            > <p>Explore</p><IoIosArrowBack size={30} /> </BtnExplore> </Explore>
         </Container>
     )
 }

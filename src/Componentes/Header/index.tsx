@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Menu, Titulo, TituloMenu, BotaoClose, ListNav } from "./Styles"
-import HomeIcon from '@mui/icons-material/Home';
-import ArchitectureIcon from '@mui/icons-material/Architecture';
-import GridViewIcon from '@mui/icons-material/GridView';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import { ImHome } from 'react-icons/im'
+import { MdOutlineContacts, MdArchitecture } from 'react-icons/md'
+import { IoIosArrowBack } from 'react-icons/io'
 
 interface Props {
     scroll: number;
@@ -22,7 +21,7 @@ function Header({scroll}: Props){
         <>
             <Titulo id='home'>GMPLANEJADOS</Titulo>  
             <Menu propsscroll={scroll} open={close} style={{justifyContent: `${scroll > 25 ? "" : "center"}`}}>
-            <BotaoClose propsscroll={scroll} open={close} onClick={click}> <ArrowBackIosIcon /> </BotaoClose>
+            <BotaoClose propsscroll={scroll} open={close} onClick={click}> <IoIosArrowBack size={20} /> </BotaoClose>
                  <TituloMenu style={{display: `${scroll > 25 ? "" : "none"}`}}>GMPLANEJADOS</TituloMenu>
                 <ul>
 
@@ -35,7 +34,7 @@ function Header({scroll}: Props){
                     offset={0}
                     duration={500}
                 >
-                <ArchitectureIcon /> <p>Projetos</p>
+                <MdArchitecture size={20}/> <p>Projetos</p>
                 </ListNav>
 
                 <ListNav
@@ -47,7 +46,7 @@ function Header({scroll}: Props){
                     offset={-10}
                     duration={500}
                 >
-                <HomeIcon /> <p>Home</p>
+                <ImHome size={20}/> <p>Home</p>
                 </ListNav>
 
                 <ListNav
@@ -60,7 +59,7 @@ function Header({scroll}: Props){
                     duration={500}
 
                 >   
-                <GridViewIcon /> <p>Contato</p>
+                <MdOutlineContacts size={20}/> <p>Contato</p>
                 </ListNav>
 
                 </ul>

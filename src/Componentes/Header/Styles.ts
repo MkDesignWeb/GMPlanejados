@@ -93,9 +93,11 @@ export const Menu = styled.nav<Props>`
 export const ListNav = styled(Link) `
     position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
     padding: 1.3rem 1rem;
+    font-weight: bold;
     
     transition: ease 0.1s;
     color: ${props => props.theme.colors.secudary};

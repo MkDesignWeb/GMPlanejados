@@ -9,10 +9,12 @@ export const Container = styled.section`
 
     display: flex;
     justify-content: center;
-    gap: 5vw;
-    padding-top: 3rem;
+    align-items: center;
+    gap: 4rem;
+    padding: 3rem 1rem 0;
 
     @media (max-width:750px) {
+        gap: 1rem;
         padding-top: 2rem;
         flex-direction: column;
         align-items: center;
@@ -21,7 +23,8 @@ export const Container = styled.section`
 `
 
 export const Celular = styled.img`
-    height: 33rem;
+    height: 35vw;
+    max-height: 33rem;
 
 
     @media (max-width: 750px) {
@@ -82,9 +85,10 @@ export const Redes = styled.div`
     padding: 1.2rem 0 0 0;
     font-size: 2rem;
     font-family: 'Roboto' sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     align-items: center;
-    color: ${props => props.theme.colors.text};
+    gap: 0.3rem;
+    color: black;
     
     @media (max-width:750px){
             font-size: 1.7rem;

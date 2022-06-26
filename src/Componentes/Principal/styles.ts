@@ -69,6 +69,7 @@ export const BtnExplore = styled(Link)`
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    gap: 0.4rem;
     padding: 1rem;
 
     svg{
