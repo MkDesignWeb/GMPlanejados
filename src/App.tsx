@@ -25,7 +25,7 @@ function App() {
   return (
 
     
-    
+
     <ThemeProvider theme={cor}>
       <Header scroll={scroll}/>
       <Orcamento scroll={scroll}/>
@@ -35,6 +35,7 @@ function App() {
       <Rodape/>
       <GlobalStyle />
     </ThemeProvider>
+
     
     
     )
