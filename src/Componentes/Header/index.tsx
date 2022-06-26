@@ -21,7 +21,7 @@ function Header({scroll}: Props){
         <>
             <Titulo id='home'>GMPLANEJADOS</Titulo>  
             <Menu propsscroll={scroll} open={close} style={{justifyContent: `${scroll > 25 ? "" : "center"}`}}>
-            <BotaoClose propsscroll={scroll} open={close} onClick={click}> <IoIosArrowBack size={20} /> </BotaoClose>
+            <BotaoClose propsscroll={scroll} open={close} onClick={click}> <IoIosArrowBack size={25} /> </BotaoClose>
                  <TituloMenu style={{display: `${scroll > 25 ? "" : "none"}`}}>GMPLANEJADOS</TituloMenu>
                 <ul>
 
