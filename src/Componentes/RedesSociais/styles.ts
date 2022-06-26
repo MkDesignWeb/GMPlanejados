@@ -89,7 +89,7 @@ export const Redes = styled.div`
     font-weight: 600;
     align-items: center;
     gap: 0.3rem;
-    color: black;
+    color: #111111;
     
     @media (max-width:750px){
             font-size: 1.7rem;
