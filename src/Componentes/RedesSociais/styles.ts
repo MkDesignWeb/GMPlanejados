@@ -28,7 +28,8 @@ export const Celular = styled.img`
 
 
     @media (max-width: 750px) {
-        height: 20rem;
+        height: 60vw;
+        max-height: 23rem;
     }
 
 `
