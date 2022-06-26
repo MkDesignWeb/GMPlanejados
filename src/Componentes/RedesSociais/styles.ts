@@ -23,7 +23,7 @@ export const Container = styled.section`
 `
 
 export const Celular = styled.img`
-    height: 35vw;
+    height: 38vw;
     max-height: 33rem;
 
 
