@@ -40,9 +40,8 @@ function Projetos() {
         
     }
    
-    const {data} = useQuery<moveis>(GET_MOVEIS)
+     const {data} =  useQuery<moveis>(GET_MOVEIS)
 
-    console.log(data)
 
     if(!data){
         return(
