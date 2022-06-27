@@ -43,7 +43,7 @@ export const CImagem = styled.img`
         object-fit: scale-down;
     
     @media(max-width: 750px){
-        max-height: 75vh;
+        max-height: 73vh;
     }
 
 `
