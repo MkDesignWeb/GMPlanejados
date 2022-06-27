@@ -10,7 +10,7 @@ import { useParams } from 'react-router-dom';
 
 const GET_MOVEIS = gql`
     query {
-     moveisDbs (stage: PUBLISHED){
+     moveisDbs (stage: PUBLISHED, first: 100){
         id
         img {
         url
@@ -38,7 +38,6 @@ function Projetos() {
 
     const { slug } = useParams<{slug: string}>()
     const { data } = useQuery<moveis>(GET_MOVEIS)
-
 
     if (!data) {
         return (

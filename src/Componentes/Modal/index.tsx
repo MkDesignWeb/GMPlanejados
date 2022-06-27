@@ -42,6 +42,8 @@ function Modal(){
         }
     })
 
+    
+
     if( !data ){
         return(
             <Container>

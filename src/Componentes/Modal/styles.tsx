@@ -37,7 +37,7 @@ export const Cmodal = styled.div`
 `
 
 export const CImagem = styled.img`
-        background-color: #1111;
+        background-color: #d8d8d8;
         width: 100%;
         max-height: 90vh;
         object-fit: scale-down;
@@ -57,11 +57,16 @@ export const CTexto = styled.div`
 
     width: 20rem;
     height: 90vh;
+    gap: 0.3rem;
+
+    >h1{
+        color: ${props => props.theme.colors.secudary}
+    }
 
     @media(max-width: 750px){
         width: 100%;
         height: auto;
-        padding: 1rem 0.3rem;
+        padding: 1rem 0.7rem;
     }
 `
 
