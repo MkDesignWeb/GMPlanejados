@@ -14,7 +14,6 @@ export const Container = styled.section`
     height: auto;
     width: 100%;
     padding-top: 1rem ;
-
 `
 
 export const MarcCorM = styled(MarcCor)``

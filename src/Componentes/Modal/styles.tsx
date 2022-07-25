@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+
 export const Container = styled.div`
     display: flex;
     z-index: 7;
@@ -13,13 +14,12 @@ export const Container = styled.div`
     height: 101vh;
 
     background-color: rgba(0, 0, 0, 0.7)
-    
 `
 
 export const Cmodal = styled.div`
     position: relative;
     background-color: white;
-    margin: 0.7rem;
+    margin: 0 0.7rem;
     border-radius: 0.3rem;
 
     display: flex;
@@ -27,12 +27,13 @@ export const Cmodal = styled.div`
     align-items: center;
     justify-content: center;
 
-    
-    
+    max-height: 95vh;
+    overflow-y: scroll;
 
 
     @media (max-width: 750px) {
         flex-direction: column;
+        justify-content: flex-start;
     }
 `
 
@@ -92,6 +93,7 @@ export const Close = styled(Link)`
     right: 0.2rem;
 
     display: flex;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     color: ${props => props.theme.colors.secudary};
@@ -101,13 +103,14 @@ export const Close = styled(Link)`
     height: 2.2em;
 
     @media(max-width: 750px){
+        position: sticky;
         justify-content: end;
         padding-right: 0.5rem;
         width: 100%;
         border-radius: initial;
         border-top-left-radius: 0.3rem;
         border-top-right-radius: 0.3rem;
-        top: -2.2rem;
+        top: 0;
         right: 0;
     }
 `

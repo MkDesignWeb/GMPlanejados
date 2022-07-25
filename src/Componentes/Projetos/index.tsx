@@ -5,6 +5,7 @@ import { gql, useQuery } from "@apollo/client";
 import { Container, Separador, TituloM, MarcCorM, Bfoto, Galeria, Imagem, Black } from './styles'
 import { Oval } from 'react-loader-spinner';
 import { useParams } from 'react-router-dom';
+import GlobalStyled from '../../Styles/GlobalStyled';
 
 
 
@@ -38,7 +39,6 @@ function Projetos() {
 
     const { slug } = useParams<{slug: string}>()
     const { data } = useQuery<moveis>(GET_MOVEIS)
-
     if (!data) {
         return (
             <Container id='projetos'>

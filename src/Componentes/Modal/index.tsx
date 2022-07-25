@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import { Oval } from 'react-loader-spinner'
 import { Container, Cmodal, CImagem, CTexto, Loading, Close } from './styles'
 import { AiOutlineClose } from 'react-icons/ai'
+import GlobalStyled from '../../Styles/GlobalStyled'
 
 
 const GET_MOVEIS_BY_SLUG = gql`
@@ -62,7 +63,7 @@ function Modal(){
     }
    
     return(
-        <Container >
+        <Container>
             <Cmodal>
                 <Close to={'/'}>
                     <AiOutlineClose size={23} />

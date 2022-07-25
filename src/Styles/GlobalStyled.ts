@@ -1,6 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
+
+
 export default createGlobalStyle`
+
 body{
   max-width: 100vw;
   overflow-x: hidden;
