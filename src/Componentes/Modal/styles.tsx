@@ -2,6 +2,10 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 
+interface Props {
+    active: boolean
+}
+
 export const Container = styled.div`
     display: flex;
     z-index: 7;
@@ -56,7 +60,7 @@ export const CTexto = styled.div`
 
     padding: 1rem;
 
-    width: 20rem;
+    width: 25rem;   
     height: 90vh;
     gap: 0.3rem;
 
@@ -65,9 +69,10 @@ export const CTexto = styled.div`
     }
 
     @media(max-width: 750px){
+        order: 2;
         width: 100%;
         height: auto;
-        padding: 1rem 0.7rem;
+        padding: 0.7rem;
     }
 `
 
@@ -88,29 +93,101 @@ export const Loading = styled.div`
 `
 
 export const Close = styled(Link)`
-    position: absolute;
-    top: 0.2rem;
-    right: 0.2rem;
-
     display: flex;
-    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     color: ${props => props.theme.colors.secudary};
-    background-color: white;
-    border-radius: 40%;
     width: 2.2rem;
     height: 2.2em;
 
     @media(max-width: 750px){
-        position: sticky;
-        justify-content: end;
-        padding-right: 0.5rem;
+    }
+`
+
+export const CImagemPlus = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    padding: 1rem 0;
+    gap: 5px;
+    height: 90vh;
+    width: 100px;
+    background-color: #ffffff;
+
+    @media(max-width: 750px){
+        padding: 0.5rem ;
+        flex-direction: row;
+        order: 1;
         width: 100%;
-        border-radius: initial;
-        border-top-left-radius: 0.3rem;
-        border-top-right-radius: 0.3rem;
-        top: 0;
-        right: 0;
+        height: 50px;
+    }
+
+    img {
+
+        background-color: #b3b3b3;
+        border-radius: 5px;
+        object-fit: cover;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+       }
+`
+
+export const ImgPlus = styled(Link)<Props>`
+    width: 50px;
+    height: 50px;
+    border: ${props => props.active ? `2px solid ${props.theme.colors.primary}`: "" };
+    border-radius: 5px;
+    padding: 1px;
+
+    @media(max-width: 750px){
+        width: 40px;
+        height: 40px;
+    }
+`
+
+export const Compartilhar = styled.div`
+    display: flex;
+    margin: 1rem 0;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    flex-direction: column;
+    order: 1;
+    color: ${props => props.theme.colors.secudary};
+
+    a{
+        cursor: pointer;
+    }
+
+    @media (max-width:750px){
+        gap: 0.9rem;
+        order: initial;
+        margin: 0.4rem 0;
+        flex-direction: row;
+    }
+`
+
+export const SideBar = styled.div`
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+    width: 100%;
+    background-color: white;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    top: 0;
+
+    @media (min-width: 750px){
+        position: relative;
+        height: 90vh;
+        order: 1;
+        flex-direction: column;
+        justify-content: start;
+        width: auto;
     }
 `

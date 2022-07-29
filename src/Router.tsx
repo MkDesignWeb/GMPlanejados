@@ -8,6 +8,7 @@ export function Router(){
             <Route path="/" element={<Home />}/>
             <Route path="/moveis" element={<Home />}/>
             <Route path="/moveis/:slug" element={<Home />}/>
+            <Route path="/moveis/:slug/:slugImgPlus" element={<Home />}/>
         </Routes>
     )
 }
