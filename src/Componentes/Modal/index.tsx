@@ -87,7 +87,7 @@ function Modal(){
           }
         })
         
-        const textUrl = `${window.location.href}\n\n${data?.moveisDb.name}\n De uma olhada nesse móvel feito pela GMPlanejado.`
+        const textUrl = `${window.location.href}\n\n${data?.moveisDb.name}.\n\n De uma olhada nesse móvel feito pela GMPlanejado.`
 
         
         const texto = window.encodeURIComponent(textUrl) ;
@@ -118,8 +118,9 @@ function Modal(){
                         <AiOutlineWhatsApp size={30} />
                     </a>
                     <CopyToClipboard text={`${window.location.href}
-                    
+
 ${data?.moveisDb.name}.
+
 De uma olhada nesse móvel feito pela GMPlanejado.`}>
                     <a >
                         <BiLink size={30}/>
