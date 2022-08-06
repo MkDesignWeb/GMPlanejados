@@ -32,12 +32,13 @@ export const Cmodal = styled.div`
     justify-content: center;
 
     max-height: 95vh;
-    overflow-y: scroll;
+   
 
 
     @media (max-width: 750px) {
         flex-direction: column;
         justify-content: flex-start;
+        overflow-y: scroll;
     }
 `
 
@@ -45,10 +46,12 @@ export const CImagem = styled.img`
         background-color: #d8d8d8;
         width: 100%;
         max-height: 90vh;
+        max-width: 60vw;
         object-fit: scale-down;
     
     @media(max-width: 750px){
         max-height: 73vh;
+        max-width: inherit;
     }
 
 `
@@ -60,7 +63,7 @@ export const CTexto = styled.div`
 
     padding: 1rem;
 
-    width: 25rem;   
+    width: 17rem;   
     height: 90vh;
     gap: 0.3rem;
 
@@ -156,10 +159,13 @@ export const Compartilhar = styled.div`
     gap: 0.4rem;
     flex-direction: column;
     order: 1;
-    color: ${props => props.theme.colors.secudary};
+    
 
     a{
         cursor: pointer;
+        text-decoration: none;
+        color: ${props => props.theme.colors.secudary};
+
     }
 
     @media (max-width:750px){

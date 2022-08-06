@@ -3,8 +3,9 @@ import { useParams } from 'react-router-dom'
 
 import { Oval } from 'react-loader-spinner'
 import { Container, Cmodal, CImagem, CTexto, Loading, Close, CImagemPlus, ImgPlus, Compartilhar, SideBar } from './styles'
-import { AiOutlineClose, AiOutlineWhatsApp, AiOutlineShareAlt } from 'react-icons/ai'
-import { useRef, useState } from 'react'
+import { AiOutlineClose, AiOutlineWhatsApp } from 'react-icons/ai'
+import { BiLink } from 'react-icons/bi'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 
 const GET_MOVEIS_BY_SLUG = gql`
@@ -71,20 +72,25 @@ interface GetImgPlusProps {
       
 
 function Modal(){
-    const { slug, slugImgPlus } = useParams()
-
-    const { data } = useQuery<ModalMoveis>(GET_MOVEIS_BY_SLUG, {
+  
+  const { slug, slugImgPlus } = useParams()
+  
+  const { data } = useQuery<ModalMoveis>(GET_MOVEIS_BY_SLUG, {
         variables: {
-            slug: slug
+          slug: slug
         }
-    })
-
-    const getImgPlus = useQuery<GetImgPlusProps>(GET_MOVEIS_IMG_PLUS_BY_SLUG, {
+      })
+      
+      const getImgPlus = useQuery<GetImgPlusProps>(GET_MOVEIS_IMG_PLUS_BY_SLUG, {
         variables: {
             slugImgPlus: slugImgPlus
-        }
-    })
+          }
+        })
+        
+        const textUrl = `${window.location.href}\n\n${data?.moveisDb.name}\n De uma olhada nesse móvel feito pela GMPlanejado.`
 
+        
+        const texto = window.encodeURIComponent(textUrl) ;
 
     if( !data ){
         return(
@@ -108,12 +114,17 @@ function Modal(){
             <Cmodal>
                 <SideBar>
                 <Compartilhar>
-                    <a href={`"https://wa.me/?text=${window.location.href}%0D${data?.moveisDb.name}%0DDe%20uma%20olhada%20nesse%20móvel%20feito%20pela%20GMPlanejado.`} target="_blank">
+                    <a href={`https://wa.me/?text=${texto}`} target="_blank" data-action="share/whatsapp/share">
                         <AiOutlineWhatsApp size={30} />
                     </a>
+                    <CopyToClipboard text={`${window.location.href}
+                    
+${data?.moveisDb.name}.
+De uma olhada nesse móvel feito pela GMPlanejado.`}>
                     <a >
-                        <AiOutlineShareAlt size={30} />
+                        <BiLink size={30}/>
                     </a>
+                    </CopyToClipboard>
                 </Compartilhar>
 
                 <Close to={'/'}>

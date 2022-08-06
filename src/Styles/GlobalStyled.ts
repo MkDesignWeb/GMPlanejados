@@ -15,11 +15,14 @@ body{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
+
   }
 
   input{
     border: none;
     outline: none;
   }
+
+
 `
 
