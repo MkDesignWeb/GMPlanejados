@@ -108,7 +108,7 @@ function Modal(){
             <Cmodal>
                 <SideBar>
                 <Compartilhar>
-                    <a>
+                    <a href={`"https://wa.me/?text=${window.location.href}%0D${data?.moveisDb.name}%0DDe%20uma%20olhada%20nesse%20móvel%20feito%20pela%20GMPlanejado.`} target="_blank">
                         <AiOutlineWhatsApp size={30} />
                     </a>
                     <a >
