@@ -113,9 +113,9 @@ function Modal(){
     return(
         <Container>
           <Helmet>
+            <meta property="og:title" content={data?.moveisDb.name} />
             <meta property="og:image" content={ slugImgPlus !== undefined ? getImgPlus.data?.imgPlus.imgPlus.url : data?.moveisDb.img.url} />
-            <meta property="og:image:width" content="400" />
-            <meta property="og:image:height" content="300" />
+            <meta property="og:type" content="website" />
           </Helmet>
             <Cmodal>
                 <SideBar>
