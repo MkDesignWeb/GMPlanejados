@@ -6,6 +6,7 @@ import { Container, Cmodal, CImagem, CTexto, Loading, Close, CImagemPlus, ImgPlu
 import { AiOutlineClose, AiOutlineWhatsApp } from 'react-icons/ai'
 import { BiLink } from 'react-icons/bi'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
+import {Helmet} from 'react-helmet'
 
 
 const GET_MOVEIS_BY_SLUG = gql`
@@ -111,6 +112,12 @@ function Modal(){
    
     return(
         <Container>
+          <Helmet>
+            <meta property="og:image" content={ slugImgPlus !== undefined ? getImgPlus.data?.imgPlus.imgPlus.url : data?.moveisDb.img.url} />
+            <meta property="og:image:type" content="image/jpeg" />
+            <meta property="og:image:width" content="400" />
+            <meta property="og:image:height" content="300" />
+          </Helmet>
             <Cmodal>
                 <SideBar>
                 <Compartilhar>
