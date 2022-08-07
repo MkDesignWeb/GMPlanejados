@@ -111,12 +111,6 @@ function Modal() {
   }
 
   return (
-    <>
-      <Helmet>
-        <meta property="og:title" content={data?.moveisDb.name} />
-        <meta property="og:image" content={slugImgPlus !== undefined ? getImgPlus.data?.imgPlus.imgPlus.url : data?.moveisDb.img.url} />
-        <meta property="og:type" content="website" />
-      </Helmet>
       <Container>
         <Cmodal>
           <SideBar>
@@ -159,7 +153,6 @@ De uma olhada nesse móvel feito pela GMPlanejado.`}>
           </CTexto>
         </Cmodal>
       </Container>
-    </>
   )
 }
 
