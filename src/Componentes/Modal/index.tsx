@@ -114,7 +114,6 @@ function Modal(){
         <Container>
           <Helmet>
             <meta property="og:image" content={ slugImgPlus !== undefined ? getImgPlus.data?.imgPlus.imgPlus.url : data?.moveisDb.img.url} />
-            <meta property="og:image:type" content="image/jpeg" />
             <meta property="og:image:width" content="400" />
             <meta property="og:image:height" content="300" />
           </Helmet>
