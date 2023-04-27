@@ -117,7 +117,7 @@ function Modal() {
               <a href={`https://wa.me/?text=${texto}`} target="_blank" data-action="share/whatsapp/share">
                 <AiOutlineWhatsApp size={30} />
               </a>
-              <CopyToClipboard text={`${window.location.href}${data?.moveisDb.name}`}>
+              <CopyToClipboard text={window.location.href}>
                 <a >
                   <BiLink size={30} />
                 </a>
